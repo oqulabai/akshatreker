@@ -122,3 +122,30 @@ if (splashDone) {
 }
 
 console.log('\nДайын. Енді: npx cap sync android → Android Studio-да қайта жина.');
+
+// ---------- 4. Қолданба белгішесі (иконка) ----------
+console.log('4) Қолданба белгішесі');
+if (fs.existsSync('icons')) {
+  let copied = 0;
+  for (const d of fs.readdirSync('icons')) {
+    const from = path.join('icons', d), to = path.join(RES, d);
+    if (!fs.statSync(from).isDirectory()) continue;
+    fs.mkdirSync(to, { recursive: true });
+    for (const f of fs.readdirSync(from)) { fs.copyFileSync(path.join(from, f), path.join(to, f)); copied++; }
+  }
+  const adaptive = `<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@mipmap/ic_bg"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+</adaptive-icon>
+`;
+  const v26 = path.join(RES, 'mipmap-anydpi-v26');
+  if (fs.existsSync(v26)) {
+    for (const n of ['ic_launcher.xml', 'ic_launcher_round.xml']) fs.writeFileSync(path.join(v26, n), adaptive);
+    ok(`белгіше файлдары көшірілді (${copied}), адаптивті иконка жаңартылды`);
+  } else {
+    warn('mipmap-anydpi-v26 табылмады: тек кәдімгі белгіше ауыстырылды');
+  }
+} else {
+  warn('icons/ папкасы жоқ: белгішеге тиіспедім');
+}
