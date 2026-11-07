@@ -682,7 +682,66 @@ html[data-theme="light"] #recentList .recent-item{background:#fff;box-shadow:0 1
 .fab:active{transform:scale(.9)}
 .fab svg{width:1.7rem;height:1.7rem;display:block}
 html[data-theme="light"] .fab{background:linear-gradient(135deg,#34d672,#15a34a);color:#fff;box-shadow:0 16px 28px -10px rgba(21,163,74,.8),0 0 0 4px rgba(21,163,74,.12)}
+.addtx-amount{text-align:center;font-size:1.5rem;font-weight:800;min-height:3.6rem}
+.chip-label{margin:.9rem 0 .45rem;font-size:.78rem;font-weight:700;color:var(--muted)}
+.chip-grid{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{border:1px solid var(--border);background:var(--fill2);color:var(--text);border-radius:999px;padding:.6rem 1rem;min-height:2.6rem;font:inherit;font-size:.88rem;font-weight:600;cursor:pointer;transition:transform .2s,background .25s,color .25s,border-color .25s}
+.chip:active{transform:scale(.94)}
+.chip.on{background:linear-gradient(135deg,#a4f8bc,#4fdc7c);color:#042b13;border-color:transparent;font-weight:800}
+html[data-theme="light"] .chip.on{background:linear-gradient(135deg,#34d672,#15a34a);color:#fff}
+.chip-grid+.form-row{margin-top:.9rem}
+/* шоттар: бір карточка ішінде жинақы қатарлар */
+.acc-list{padding:.2rem 1.15rem;margin-bottom:0}
+.acc-row+.acc-row{border-top:1px solid var(--border)}
+.acc-row-head{display:flex;align-items:center;gap:.8rem;width:100%;padding:.95rem 0;background:none;border:0;color:inherit;font:inherit;text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.acc-row-head::before{content:'';flex:none;align-self:stretch;width:.3rem;border-radius:.2rem;background:var(--tc)}
+.acc-row-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:.15rem}
+.acc-row .bank-name{margin:0;font-size:1.05rem;overflow-wrap:anywhere}
+.acc-row-hint{font-size:.74rem;font-weight:600;color:var(--muted)}
+.acc-row .bank-balance{margin:0;font-size:1.3rem;white-space:nowrap;text-align:right}
+.acc-chev{flex:none;width:.5rem;height:.5rem;margin:0 .25rem .2rem .1rem;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .25s}
+.acc-row-head.on .acc-chev{transform:translateY(.2rem) rotate(-135deg)}
+.acc-row .acc-history{margin:0 0 .9rem}
 .nav-btn{font-weight:600}
+/* ===== Жинақы көк-күлгін дизайн: аз скрол, тік бұрыштырақ пішін ===== */
+html{font-size:14.5px}
+html[data-theme="dark"]{--bg:#0b0d1f;--card:rgba(255,255,255,.05);--card2:rgba(255,255,255,.07);--border:rgba(160,170,255,.15);--muted:#9aa0d0;--accent:#7c83ff;--accent2:#a5a9ff;--prim:#7c83ff;--prim-ink:#fff;--pop:rgba(18,20,52,.98);--fill:rgba(160,170,255,.06);--fill2:rgba(160,170,255,.10)}
+html[data-theme="light"]{--bg:#eef0fb;--card:#fff;--card2:#f3f4fd;--border:rgba(40,50,140,.12);--text:#12163a;--muted:#5b6390;--accent:#4f5bd5;--accent2:#6d78ea;--prim:#4f5bd5;--prim-ink:#fff;--pop:#fff;--fill:rgba(40,50,140,.04);--fill2:rgba(40,50,140,.07)}
+html[data-theme="dark"] body::before{background:radial-gradient(80vmax 40vmax at 50% -12%,rgba(124,131,255,.24),transparent 62%)}
+html[data-theme="light"] body::before{background:radial-gradient(80vmax 40vmax at 50% -12%,rgba(99,110,240,.16),transparent 60%)}
+.card,.sum-card,.bank-box,.modal-box,#recentList .recent-item{border-radius:.9rem!important}
+.card{padding:.85rem 1rem;margin-bottom:.7rem}
+.modal-box{border-radius:1.1rem 1.1rem 0 0!important}
+html[data-theme="dark"] .card,html[data-theme="dark"] .bank-box,html[data-theme="dark"] #recentList .recent-item{background:rgba(255,255,255,.05)!important;border:1px solid var(--border)}
+html[data-theme="light"] .card,html[data-theme="light"] #recentList .recent-item{box-shadow:0 1px 2px rgba(40,50,140,.06)}
+.greet{margin:.1rem 4rem 0 .1rem;font-size:.8rem}
+h1{font-size:1.15rem;margin:0 4rem .6rem .1rem}
+.summary{gap:.5rem;margin-bottom:.6rem}
+html[data-theme] .summary>.sum-card:first-child{background:linear-gradient(135deg,#6a73f0,#4a52d6 62%,#7a5cf0)!important;border:0!important;color:#fff!important;box-shadow:0 14px 26px -16px rgba(79,91,213,.8)!important}
+html[data-theme] .summary>.sum-card:first-child>.label{color:rgba(255,255,255,.82)}
+html[data-theme] .summary>.sum-card:first-child>.val{color:#fff;font-size:1.9rem}
+.summary>.sum-card.hero{padding:.9rem 1rem .8rem;border-radius:.9rem}
+.summary>.sum-card.hero>.val{margin:0 0 .65rem}
+.hs{padding:.45rem .55rem;border-radius:.7rem;border-color:rgba(255,255,255,.18)}
+.summary>.sum-card.nw{padding:.55rem .9rem;border-radius:.9rem}
+.acc-section h2,.sec-head h2{font-size:1rem;font-weight:700;margin:.8rem .1rem .4rem}
+.recent-list{gap:.35rem}
+#recentList .recent-item{padding:.45rem .65rem;gap:.6rem}
+#recentList .r-ic{width:2.1rem;height:2.1rem;border-radius:.6rem;font-size:.9rem}
+.acc-list{padding:.1rem 1rem;margin-bottom:0}
+.acc-row-head{padding:.6rem 0}
+.acc-row .bank-name{font-size:.98rem}
+.acc-row .bank-balance{font-size:1.15rem}
+.add-btn,.bank-btn,.acc-btn.on,.filter-btn.active,.chip.on,html[data-theme] .fab{background:linear-gradient(135deg,#8b93ff,#5b63e6)!important;color:#fff!important;border-color:transparent!important}
+.add-btn,.bank-btn,.acc-btn,.io-btn,.filter-btn,.chip,.type-toggle,.type-btn{border-radius:.7rem!important}
+html[data-theme] .fab{width:3.1rem;height:3.1rem;border-radius:.95rem!important;box-shadow:0 12px 24px -10px rgba(91,99,230,.9)}
+.fab svg{width:1.45rem;height:1.45rem}
+.bottom-nav{border-radius:1.1rem!important;padding:.25rem!important}
+.nav-btn{min-height:2.9rem!important;border-radius:.8rem!important}
+html[data-theme="dark"] .bottom-nav{background:rgba(10,12,34,.88);border:1px solid var(--border)}
+html[data-theme] .lg-pill{background:rgba(124,131,255,.26);border:1px solid rgba(165,169,255,.5);box-shadow:0 0 18px rgba(124,131,255,.3);border-radius:.8rem}
+html[data-theme="dark"] .nav-btn.active{color:#fff}
+html[data-theme="light"] .nav-btn.active{color:var(--prim)}
 </style>
 </head>
 <body>
@@ -720,7 +779,7 @@ html[data-theme="light"] .fab{background:linear-gradient(135deg,#34d672,#15a34a)
 
   <section class="acc-section">
     <h2>🏦 Менің шоттарым</h2>
-    <div class="bank-grid" id="bankGrid"></div>
+    <div class="card acc-list" id="bankGrid"></div>
     <div id="undoNotice" style="display:none;margin-top:0.875rem;padding:0.625rem 0.875rem;background:var(--card2);border:1px solid var(--border);border-radius:0.625rem;font-size:.85rem;justify-content:space-between;align-items:center;gap:0.625rem;">
       <span id="undoText"></span>
       <button class="io-btn" onclick="undoLastTx()">↩ Болдырмау</button>
@@ -963,7 +1022,7 @@ let accounts = {
   kaspi: { name: 'Kaspi Bank',    color: 'kaspi-box', transactions: [] },
   halyk: { name: 'Halyk Bank',    color: 'halyk-box', transactions: [] }
 };
-let accCurrentType = { cash:'income', kaspi:'income', halyk:'income' };
+let lastAddAcc = null, lastAddType = 'income';
 let currentFilter = 'all';
 const STORAGE_KEY = 'aksha_tracker_entries';
 let storageWorks = false;
@@ -1456,46 +1515,20 @@ document.addEventListener('visibilitychange', ()=>{
   if(n){ render(); saveToStorage(); showRecurNotice(n); }
 });
 
-function populateAccountCategories(accKey){
-  const sel = document.getElementById('cat_' + accKey);
-  if(!sel) return;
-  const type = accCurrentType[accKey];
-  sel.innerHTML = categories[type].map(c=>`<option value="${c}">${c}</option>`).join('');
-}
-
-function setAccType(accKey, type){
-  accCurrentType[accKey] = type;
-  document.getElementById('btnIncome_' + accKey).className = 'type-btn' + (type==='income' ? ' active-income':'');
-  document.getElementById('btnExpense_' + accKey).className = 'type-btn' + (type==='expense' ? ' active-expense':'');
-  populateAccountCategories(accKey);
-}
-
 function buildAccountBoxes(){
   const grid = document.getElementById('bankGrid');
   grid.innerHTML = Object.keys(accounts).map(key=>{
     const acc = accounts[key];
     return `
-    <div class="bank-box ${acc.color}">
-      <div class="bank-head"><div class="bank-name">${esc(acc.name)}</div><div class="bank-balance" id="balance_${key}">0 ₸</div></div>
-      <div class="acc-actions">
-        <button class="acc-btn" id="accAddBtn_${key}" onclick="toggleAccAdd('${key}')">＋ Операция</button>
-        <button class="acc-btn" id="accHistBtn_${key}" onclick="toggleAccHistory('${key}')">🕘 Тарих</button>
-      </div>
-      <div class="acc-add" id="accAdd_${key}"><div class="acc-in">
-      <div class="form-row" style="margin-bottom:0.5rem;">
-        <div class="type-toggle">
-          <button class="type-btn active-income" id="btnIncome_${key}" onclick="setAccType('${key}','income')">↑ Кіріс</button>
-          <button class="type-btn" id="btnExpense_${key}" onclick="setAccType('${key}','expense')">↓ Шығыс</button>
-        </div>
-      </div>
-      <div class="bank-form">
-        <input type="text" id="desc_${key}" placeholder="Сипаттама (міндетті емес)">
-        <input type="number" inputmode="decimal" id="amount_${key}" placeholder="Сома, ₸">
-        <select id="cat_${key}"></select>
-        <input type="date" id="date_${key}">
-        <button class="bank-btn" onclick="addAccountTx('${key}')">Қосу</button>
-      </div>
-      </div></div>
+    <div class="acc-row ${acc.color}">
+      <button type="button" class="acc-row-head" id="accHistBtn_${key}" onclick="toggleAccHistory('${key}')" aria-expanded="false">
+        <span class="acc-row-main">
+          <span class="bank-name">${esc(acc.name)}</span>
+          <span class="acc-row-hint">🕘 Тарих</span>
+        </span>
+        <span class="bank-balance" id="balance_${key}">0 ₸</span>
+        <span class="acc-chev" aria-hidden="true"></span>
+      </button>
       <div class="acc-history" id="accHist_${key}">
         <table>
           <thead><tr><th>Күні</th><th>Сипаттама</th><th>Санат</th><th style="text-align:right">Сома</th><th></th><th></th></tr></thead>
@@ -1504,11 +1537,6 @@ function buildAccountBoxes(){
       </div>
     </div>`;
   }).join('');
-
-  Object.keys(accounts).forEach(key=>{
-    populateAccountCategories(key);
-    document.getElementById('date_' + key).value = todayISO();
-  });
 
   const fromSel = document.getElementById('transferFrom');
   const toSel = document.getElementById('transferTo');
@@ -1539,31 +1567,98 @@ function fmtDateDisplay(d){
   return d;
 }
 
-function addAccountTx(accKey){
-  const desc = document.getElementById('desc_' + accKey).value.trim() || document.getElementById('cat_' + accKey).value;
-  const amount = parseFloat(document.getElementById('amount_' + accKey).value);
-  const category = document.getElementById('cat_' + accKey).value;
-  const type = accCurrentType[accKey];
-  const dateVal = document.getElementById('date_' + accKey).value || todayISO();
+// "+" батырмасын басқанда төменнен шығатын операция қосу терезесі
+function openAddTx(){
+  if(document.querySelector('.addtx-overlay')) return;
+  const keys = Object.keys(accounts);
+  if(!keys.length) return;
+  let accSel = (lastAddAcc && accounts[lastAddAcc]) ? lastAddAcc : (accounts.cash ? 'cash' : keys[0]);
+  let type = lastAddType, catSel = null;
 
-  if(!amount || amount<=0){
-    alert('Соманы дұрыс енгізіңіз');
-    return;
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay addtx-overlay';
+  overlay.innerHTML = `
+    <div class="modal-box">
+      <h3>＋ Операция</h3>
+      <div class="form-row">
+        <div class="type-toggle">
+          <button type="button" class="type-btn" id="addBtnIncome">↑ Кіріс</button>
+          <button type="button" class="type-btn" id="addBtnExpense">↓ Шығыс</button>
+        </div>
+      </div>
+      <div class="form-row"><input type="number" inputmode="decimal" id="addAmount" class="addtx-amount" style="width:100%" placeholder="Сома, ₸"></div>
+      <div class="chip-label">Шот</div>
+      <div class="chip-grid" id="addAccChips" role="radiogroup"></div>
+      <div class="chip-label">Санат</div>
+      <div class="chip-grid" id="addCatChips" role="radiogroup"></div>
+      <div class="form-row"><input type="date" id="addDate" style="width:100%" value="${todayISO()}"></div>
+      <div class="form-row"><input type="text" id="addDesc" style="width:100%" placeholder="Сипаттама (міндетті емес)"></div>
+      <div class="modal-actions">
+        <button type="button" class="io-btn" id="addCancel">Бас тарту</button>
+        <button type="button" class="add-btn" id="addSave">Қосу</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  const q = sel => overlay.querySelector(sel);
+  const close = () => { if(overlay.parentNode) overlay.parentNode.removeChild(overlay); };
+
+  // select орнына басып таңдайтын чиптер (телефонның стандартты тізімінсіз)
+  function chipsHTML(items, selected){
+    return items.map(([v,label])=>`<button type="button" class="chip${v===selected?' on':''}" role="radio" aria-checked="${v===selected}" data-v="${esc(v)}">${esc(label)}</button>`).join('');
   }
-
-  const newId = Date.now();
-  accounts[accKey].transactions.unshift({
-    id: newId, type, desc, amount, category,
-    date: dateVal
+  function pickChip(box, btn){
+    box.querySelectorAll('.chip').forEach(c=>{ const on = c===btn; c.classList.toggle('on', on); c.setAttribute('aria-checked', on); });
+  }
+  const accBox = q('#addAccChips'), catBox = q('#addCatChips');
+  accBox.innerHTML = chipsHTML(keys.map(k=>[k, accounts[k].name]), accSel);
+  accBox.addEventListener('click', e=>{
+    const b = e.target.closest('.chip'); if(!b) return;
+    accSel = b.dataset.v; pickChip(accBox, b);
+  });
+  catBox.addEventListener('click', e=>{
+    const b = e.target.closest('.chip'); if(!b) return;
+    catSel = b.dataset.v; pickChip(catBox, b);
   });
 
-  document.getElementById('desc_' + accKey).value = '';
-  document.getElementById('amount_' + accKey).value = '';
-  document.getElementById('date_' + accKey).value = todayISO();
-  toggleAccAdd(accKey, false);
-  render();
-  saveToStorage();
-  showUndoNotice(accKey, newId, type, desc, amount);
+  function setType(t){
+    type = t;
+    q('#addBtnIncome').className = 'type-btn' + (t==='income' ? ' active-income' : '');
+    q('#addBtnExpense').className = 'type-btn' + (t==='expense' ? ' active-expense' : '');
+    catSel = categories[t][0];
+    catBox.innerHTML = chipsHTML(categories[t].map(c=>[c,c]), catSel);
+  }
+  setType(type);
+
+  function save(){
+    const amount = parseFloat(q('#addAmount').value);
+    if(!amount || amount<=0){
+      alert('Соманы дұрыс енгізіңіз');
+      return;
+    }
+    const key = accSel;
+    const category = catSel;
+    const desc = q('#addDesc').value.trim() || category;
+    const date = q('#addDate').value || todayISO();
+    const newId = Date.now();
+    accounts[key].transactions.unshift({ id: newId, type, desc, amount, category, date });
+    lastAddAcc = key; lastAddType = type;
+    close();
+    render();
+    saveToStorage();
+    showUndoNotice(key, newId, type, desc, amount);
+  }
+
+  q('#addBtnIncome').addEventListener('click', ()=>setType('income'));
+  q('#addBtnExpense').addEventListener('click', ()=>setType('expense'));
+  q('#addCancel').addEventListener('click', close);
+  q('#addSave').addEventListener('click', save);
+  overlay.addEventListener('click', e=>{ if(e.target===overlay) close(); });
+  overlay.addEventListener('keydown', e=>{
+    if(e.key==='Escape'){ close(); }
+    else if(e.key==='Enter' && e.target.tagName==='INPUT'){ e.preventDefault(); save(); }
+  });
+  setTimeout(()=>{ const a = q('#addAmount'); if(a) a.focus(); }, 120);
 }
 
 function deleteAccountTx(accKey, id){
@@ -1938,7 +2033,8 @@ function toggleAccHistory(accKey){
   const btn = document.getElementById('accHistBtn_' + accKey);
   const isHidden = panel.style.display !== 'block';
   panel.style.display = isHidden ? 'block' : 'none';
-  btn.textContent = isHidden ? '✕ Жасыру' : '🕘 Тарих'; btn.classList.toggle('on', isHidden);
+  btn.classList.toggle('on', isHidden);
+  btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
 }
 
 // ===== Қарыздар =====
@@ -2661,24 +2757,11 @@ function initTheme(){
 }
 
 
-function toggleAccAdd(key, force){
-  const box = document.getElementById('accAdd_' + key), btn = document.getElementById('accAddBtn_' + key);
-  if(!box) return;
-  const open = (typeof force === 'boolean') ? force : !box.classList.contains('open');
-  box.classList.toggle('open', open);
-  btn.classList.toggle('on', open);
-  btn.textContent = open ? '✕ Жабу' : '＋ Операция';
-  if(open){ const a = document.getElementById('amount_' + key); if(a) setTimeout(()=>a.focus(), 120); }
-}
-function fabAdd(){
-  switchTab('dashboard');
-  toggleAccAdd('cash', true);
-  const b=document.getElementById('accAdd_cash'); if(b) setTimeout(()=>b.scrollIntoView({behavior:'smooth',block:'center'}),80);
-}
+function fabAdd(){ openAddTx(); }
 function renderRecent(){
   const box = document.getElementById('recentList'); if(!box) return;
   const list = allTransactionsFlat().slice(0,5);
-  box.innerHTML = list.length===0 ? '<p class="empty">Әзірге операция жоқ. Шотты таңдап «＋ Операция» басыңыз</p>' :
+  box.innerHTML = list.length===0 ? '<p class="empty">Әзірге операция жоқ. «＋» батырмасын басыңыз</p>' :
     list.map(t=>{const inc=t.type==='income';
       return `<div class="recent-item"><div class="r-ic ${inc?'inc':'exp'}">${inc?'↓':'↑'}</div>
       <div class="r-mid"><b>${recMark(t)}${esc(t.desc)}</b><small>${esc(t.accName)} • ${fmtDateDisplay(t.date)}</small></div>
@@ -2850,7 +2933,7 @@ const ROWS=[
 [`Белгісіз`,`Неизвестно`,`Unknown`],
 [`💾 Сіз әлі бір рет те backup жасамадыңыз. Деректерді жоғалтпау үшін экспорттаңыз.`,`💾 Вы ещё ни разу не делали резервную копию. Экспортируйте данные, чтобы не потерять их.`,`💾 You haven't made a backup yet. Export your data so you don't lose it.`],
 [`⬇ Қазір backup жасау`,`⬇ Создать копию сейчас`,`⬇ Back up now`],
-[`Әзірге операция жоқ. Шотты таңдап «＋ Операция» басыңыз`,`Операций пока нет. Выберите счёт и нажмите «＋ Операция»`,`No transactions yet. Pick an account and tap “＋ Transaction”`],
+[`Әзірге операция жоқ. «＋» батырмасын басыңыз`,`Операций пока нет. Нажмите «＋»`,`No transactions yet. Tap “＋”`],
 [`Ескерту: браузер жады қолжетімсіз — деректерді Экспорт арқылы сақтаңыз`,`Внимание: память браузера недоступна — сохраняйте данные через экспорт`,`Warning: browser storage is unavailable — save your data via export`],
 [`🔄 Тұрақты операциялар`,`🔄 Регулярные операции`,`🔄 Recurring transactions`],
 [`Ай сайын қайталанатын кіріс не шығысты бір рет қосыңыз — қосымша белгіленген күні өзі есепке кіргізеді.`,`Добавьте ежемесячный доход или расход один раз — приложение само внесёт его в выбранный день.`,`Add a monthly income or expense once — the app records it automatically on the chosen day.`],
